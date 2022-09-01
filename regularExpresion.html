@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejemplo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <script>
+        const text = '11a22b33c';
+
+        // const expresión = new RegExp('(\\d\\d\\w)', 'g'); //g de global i-> no hace diferencias entre mayusculas y minusculas
+        const expression = /(\d\d)(\w)/g;
+        // const result = expresión.exec(text);
+        // console.log(result);
+
+        console.log(expression.test(text));
+        expression.lastIndex = 0;
+
+        while ((result = expression.exec(text))) {
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>
